@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ironclad Digital Studio | Bespoke Mastery</title>
+    <meta name="google-site-verification" content="MXc012P4ZPRXTcrQODgBsxOINGL7vjKOCggii6BeV90" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #00d4ff;
+            --accent: #25D366;
+            --dark: #080808;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            background-color: #ffffff;
+            color: #111;
+            overflow-x: hidden;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero { max-width: 500px; margin: 0 auto; padding: 80px 20px; }
+        h1 { font-family: 'Montserrat'; font-size: 56px; line-height: 0.9; letter-spacing: -3px; margin: 0; }
+        
+        .black-card {
+            background: linear-gradient(145deg, #111, #000);
+            color: #fff; padding: 50px 30px; border-radius: 40px;
+            position: relative; margin: 50px 0;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+        .badge {
+            position: absolute; top: -15px; left: 30px; background: var(--primary);
+            padding: 8px 25px; border-radius: 12px; font-weight: 900; color: #000;
+        }
+        .list-item { display: flex; align-items: center; margin: 20px 0; font-size: 19px; font-weight: 600; }
+        .dot { height: 10px; width: 10px; background: var(--primary); border-radius: 50%; margin-right: 15px; box-shadow: 0 0 15px var(--primary); }
+
+        /* --- EXPANDED SERVICES --- */
+        .section { padding: 100px 20px; text-align: center; }
+        .dark { background: var(--dark); color: white; border-radius: 60px 60px 0 0; }
+        
+        .services-grid {
+            display: grid;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--glass); backdrop-filter: blur(15px);
+            padding: 40px 25px; border-radius: 35px;
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: left;
+            transition: 0.3s;
+        }
+        .service-card i { font-size: 35px; color: var(--primary); margin-bottom: 15px; display: block; }
+        .service-card h3 { font-family: 'Montserrat'; font-size: 20px; margin: 10px 0; }
+        .service-card p { font-size: 14px; opacity: 0.7; line-height: 1.6; }
+
+        /* --- ROADMAP --- */
+        .roadmap { max-width: 500px; margin: 0 auto; text-align: left; }
+        .step {
+            padding: 40px; border-left: 2px dashed var(--primary);
+            margin-left: 20px; position: relative;
+        }
+        .step::before {
+            content: ''; position: absolute; left: -11px; top: 45px;
+            height: 20px; width: 20px; background: var(--primary); border-radius: 50%;
+        }
+
+        /* --- TESTIMONIALS --- */
+        .testimonial-box {
+            background: #fff; padding: 40px; border-radius: 40px 40px 40px 5px;
+            text-align: left; margin-bottom: 35px; border: 1px solid #f0f0f0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+        }
+        .testimonial-box strong { color: var(--primary); display: block; margin-top: 15px; font-family: 'Montserrat'; }
+
+        /* --- FOOTER --- */
+        .footer { background: #000; color: white; padding: 100px 20px; border-radius: 60px 60px 0 0; text-align: center; }
+        .wa-btn {
+            background: var(--accent); padding: 25px 60px; border-radius: 100px;
+            color: #fff; text-decoration: none; font-weight: 900; font-size: 22px;
+            display: inline-flex; align-items: center; gap: 15px; margin-bottom: 50px;
+        }
+        
+        .contact-info {
+            margin-top: 40px; padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .email-link { color: var(--primary); text-decoration: none; font-weight: 600; font-size: 16px; }
+        .copyright { margin-top: 20px; font-size: 13px; opacity: 0.5; letter-spacing: 1px; }
+
+        .wa-float {
+            position: fixed; bottom: 35px; right: 35px; background: var(--accent);
+            color: #fff; width: 70px; height: 70px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 35px; z-index: 10000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero" data-aos="fade-up">
+        <h1>Bespoke<br><span style="color:var(--primary)">Digital.</span></h1>
+        <div class="black-card" data-aos="zoom-in">
+            <div class="badge">IRONCLAD 2026</div>
+            <div class="list-item"><span class="dot"></span> Strategy & Design</div>
+            <div class="list-item"><span class="dot"></span> Expert Web Coding</div>
+            <div class="list-item"><span class="dot"></span> Market Dominance</div>
+        </div>
+        <img src="hero.jpg" alt="Ironclad Hero" style="width:100%; border-radius:40px;">
+    </div>
+
+    <section class="section dark">
+        <h2 style="font-family:Montserrat; font-size:38px; margin-bottom:60px;" data-aos="fade-up">Our Expertise</h2>
+        <div class="services-grid">
+            
+            <div class="service-card" data-aos="fade-up">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Development</h3>
+                <p>Bespoke, high-performance websites built with HTML, CSS, and JavaScript for maximum speed.</p>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-pencil-ruler"></i>
+                <h3>UI/UX Design</h3>
+                <p>Luxury visual interfaces tailored to your brand's unique identity and user journey.</p>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-chart-line"></i>
+                <h3>Digital Strategy</h3>
+                <p>Data-backed roadmaps to help your business achieve market dominance and growth.</p>
+            </div>
+
+            <div class="service-card" data-aos="fade-up">
+                <i class="fas fa-search-dollar"></i>
+                <h3>SEO Mastery</h3>
+                <p>Indexing and optimization to ensure your brand stays at the top of search results.</p>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-server"></i>
+                <h3>Cloud Hosting</h3>
+                <p>Secure, scalable deployment solutions ensuring 99.9% uptime for your digital platforms.</p>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Site Maintenance</h3>
+                <p>Continuous monitoring and ownership verification to keep your digital assets ironclad.</p>
+            </div>
+
+        </div>
+        <div class="container" style="margin-top:50px; padding:0 20px;">
+             <img src="marketing.jpg" alt="Marketing Strategy" style="width:100%; border-radius:40px; border:1px solid #333;">
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 style="font-family:Montserrat; font-size:35px; margin-bottom:60px;" data-aos="fade-up">The Process</h2>
+        <div class="roadmap">
+            <div class="step" data-aos="fade-up">
+                <h4>01. Discovery</h4>
+                <p style="color:#888;">Defining your bespoke path to success.</p>
+            </div>
+            <div class="step" data-aos="fade-up">
+                <h4>02. Design</h4>
+                <p style="color:#888;">Crafting a unique visual soul for your brand.</p>
+            </div>
+            <div class="step" data-aos="fade-up">
+                <h4>03. Build</h4>
+                <p style="color:#888;">Turning high-end concepts into reality.</p>
+            </div>
+        </div>
+        <div style="max-width:500px; margin:40px auto;">
+             <img src="analytics.jpg" alt="Data Analytics" style="width:100%; border-radius:40px;">
+        </div>
+    </section>
+
+    <section class="section" style="background:#fafafa;">
+        <h2 style="font-family:Montserrat; margin-bottom:60px;" data-aos="fade-up">Success Stories</h2>
+        
+        <div class="testimonial-box" data-aos="fade-right">
+            <p style="font-style:italic;">"Ironclad Digital transformed our digital presence. The attention to detail is unmatched."</p>
+            <strong>- Chidi Okechukwu, CEO</strong>
+        </div>
+
+        <div class="testimonial-box" data-aos="fade-left">
+            <p style="font-style:italic;">"The fastest delivery and the most professional team I've ever worked with. Simply bespoke."</p>
+            <strong>- Funke Adeniyi, Founder</strong>
+        </div>
+
+        <div class="testimonial-box" data-aos="fade-right">
+            <p style="font-style:italic;">"They don't just build sites; they build confidence. My business is finally dominating the market."</p>
+            <strong>- Tunde Bakare, Director</strong>
+        </div>
+
+        <div class="testimonial-box" data-aos="fade-left">
+            <p style="font-style:italic;">"Clean code and luxury design. Ironclad is the gold standard for web strategy in 2026."</p>
+            <strong>- Amaka Igwe, Tech Lead</strong>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h2 style="font-family:Montserrat; font-size:45px; margin-bottom:50px;">Start the Journey</h2>
+        
+        <a href="https://wa.me/2347089557879" class="wa-btn">
+            <i class="fab fa-whatsapp"></i> MESSAGE US
+        </a>
+
+        <div class="contact-info">
+            <a href="mailto:ironcladdigitalstudio@gmail.com" class="email-link">
+                <i class="fas fa-envelope"></i> ironcladdigitalstudio@gmail.com
+            </a>
+            <div class="copyright">
+                © 2026 IRONCLAD DIGITAL STUDIO. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/2347089557879" class="wa-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: false });
+    </script>
+</body>
+</html>
